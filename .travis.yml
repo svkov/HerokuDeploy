@@ -1,8 +1,15 @@
 dist: xenial
 language: python
 python:
-- "3.6"
-- "3.7"
+- '3.6'
+- '3.7'
+deploy:
+  provider: heroku
+  api_key:
+    secure: Wevtk0toST/+RQXVxb2K74S6JkvlL2AKzy//nf33a7dDHIRe6v8JDqCqVEVk7hI0HRuMklBnXBFDDTbyMup5WLavqmjK8qs0dXFO92rZRXiHHJwk1qW271mCq/sKL/t6nlM2y8jHOMfYQJ0Hjief9RpG+BVgbiPJqRE65WVtDBSsq3uIQHP1tN/VmSTZUqJWTmmU5YcnfpfhlxTP/00cc+LG7DZ1wd8LyNhh+B5WMTox4HVpZk8zQchHudtXW1YB6nVSvgUdeJrj6b7nNNtTZNmSFJN/+z7OSVg4bTC+vP8R7WQdzVVtSNciyDE2UwvEgLy7feWTS+56X3Z3rX95USPnMfqe9ZCnH+REyltww2TkpBmHSV87lLdpMY4NOCCLQRtOkp9cuPgnUtQrmDFuYyAC+AOTKuiQQc5dYbWcR4NV2JXDxYbCLZUtvjk3/KhnxSbMyG4fNQPMie0fC93iMTkxegXurPjTvwrGf7sw0+/OPzcGqPSN3Rz9xg7RXzIfj0Yt9DZ05DgSdDfUoHBpG4kTFus/emAsF1dwXWUFHVEqlGi4zDEWjgC8Y8f5Gd15hUJi2dmgI9vFD1OtE7K+QAR3E6ISe60KiT0NNQYSqELA1j8QOawddJGLDn1EiqFd6E1+2G/K3dROYpK3Z6MdEuQXOxB854Dcm7/529XjeUo=
+  app: python-am-cp
+  on:
+    repo: svkov/HerokuDeploy
 install:
 - pip install -r requirements.txt
 script:
