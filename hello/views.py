@@ -20,7 +20,7 @@ def create(request):
             return redirect('/')
         models.Something.objects.create(text=text).save()
         return redirect('/show/')
-    # return redirect('/')
+    return redirect('/')
 
 
 def show(request):
