@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello</title>
+    <title>Кружок по Питону</title>
 </head>
 <body>
-<p>Hello</p>
-<p>From</p>
-<p>Python AM-CP</p>
+<p>Type something</p>
+<form action="/create/" method="post">
+    {% csrf_token %}
+    <input type="text" name="text">
+    <input type="submit">
+</form>
 </body>
 </html>

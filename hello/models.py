@@ -4,4 +4,4 @@ from django.db import models
 # Create your models here.
 
 class Something(models.Model):
-    name = models.CharField(max_length=15)
+    text = models.CharField(max_length=30, default=None)
