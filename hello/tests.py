@@ -28,5 +28,10 @@ class TestViews(TestCase):
         self.client = Client()
 
     def testHelloWorld(self):
-        ans = self.client.get('/')
-        self.assertEqual(ans.status_code, 200)
+        response = self.client.get('/')
+        self.assertEqual(response.status_code, 200)
+
+    def testForm(self):
+        data = {'text': 'abcd'}
+        response = self.client.post('/create', data=data)
+        self.assertEqual(response.status_code, 301)

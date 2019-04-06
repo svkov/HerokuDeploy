@@ -10,10 +10,17 @@ def helloWorld(request):
 
 
 def create(request):
-    text = request.POST['text']
-    models.Something.objects.create(text=text)
-    return redirect('/show/')
-    # return show(request)
+    if request.method == 'POST':
+        try:
+            text = request.POST['text']
+        except:
+            print('smth went wrong')
+            print(request.POST)
+            print(request.method)
+            return redirect('/')
+        models.Something.objects.create(text=text).save()
+        return redirect('/show/')
+    # return redirect('/')
 
 
 def show(request):
