@@ -186,3 +186,8 @@ venv.bak/
 Будет удалено .idea/modules.xml
 Будет удалено hello/migrations/0001_initial.py
 Будет удалено hello/migrations/__init__.py
+!/hello/migrations/
+Будет удалено .idea/vcs.xml
+Будет удалено .idea/webResources.xml
+Будет удалено static/
+Будет удалено staticfiles/

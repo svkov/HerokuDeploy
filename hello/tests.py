@@ -10,7 +10,7 @@ class SomeTestCase(TestCase):
     def setUp(self):
         Something.objects.create(text='abc')
         Something.objects.create(text='sjdfsdk')
-"""
+
     def testName(self):
         self.assertEqual(Something.objects.get(id=1).text, 'abc')
         self.assertEqual(Something.objects.get(id=2).text, 'sjdfsdk')
@@ -35,4 +35,3 @@ class TestViews(TestCase):
         data = {'text': 'abcd'}
         response = self.client.post('/create', data=data)
         self.assertEqual(response.status_code, 301)
-"""
