@@ -11,7 +11,8 @@ deploy:
   on:
     repo: svkov/HerokuDeploy
 install:
-- pip install -r requirements.txt
+- pip install -r requirements-build.txt
 script:
 - python manage.py makemigrations
 - python manage.py migrate
+- python manage.py tests

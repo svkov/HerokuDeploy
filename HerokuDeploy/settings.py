@@ -129,5 +129,11 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-import django_heroku
-django_heroku.settings(locals())
+
+# Try to import django-heroku depending on Travis or Heroku
+try:
+    # Configure Django App for Heroku.
+    import django_heroku
+    django_heroku.settings(locals())
+except ImportError:
+    found = False
