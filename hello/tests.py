@@ -8,7 +8,7 @@ class SomeTestCase(TestCase):
     def setUp(self):
         Something.objects.create(name='abc')
         Something.objects.create(name='sjdfsdk')
-
+"""
     def testName(self):
         self.assertEqual(Something.objects.get(id=1).name, 'abc')
         self.assertEqual(Something.objects.get(id=2).name, 'sjdfsdk')
@@ -18,3 +18,4 @@ class SomeTestCase(TestCase):
         Something.objects.create(name=name)
         self.assertEqual(Something.objects.get(id=3).name, name)
 
+"""
