@@ -21,19 +21,22 @@
 ## Установка Travis
 ```bash
 sudo apt install ruby ruby-dev
-sudo gem install travis```
+sudo gem install travis
+```
 
-Если уже поставили через apt, делаем [вот это ](https://github.com/travis-ci/travis.rb/issues/400)
+Если уже поставили через apt, делаем [вот это](https://github.com/travis-ci/travis.rb/issues/400)
 
 ## Travis login
 ```bash
-travis login --pro```
+travis login --pro
+```
 
 ## [Установка Heroku](https://devcenter.heroku.com/articles/heroku-cli)
 
 ## Генерируем ключи
 ```bash
-travis encrypt $(heroku auth:token) --add deploy.api_key --pro```
+travis encrypt $(heroku auth:token) --add deploy.api_key --pro
+```
 
 ## Оформляем конфиг Travis
 Пример для django смотри в репозитории
@@ -65,11 +68,13 @@ try:
     import django_heroku
     django_heroku.settings(locals())
 except ImportError:
-    found = False```
+    found = False
+```
 ## Оформляем requirements.txt
 1. Создаем файл с помощью pip freeze > requirements.txt
 2. Travis не умеет работать с django_heroku, поэтому нужно создать отдельный файл, по которому будет собираться Travis
 3. pip freeze > requirements-build.txt
 4. Проверям, чтобы в `.travis.yml` устанавливался второй файл
 
-На этом все, ваше приложение должно успешно задеплоиться (см. на сайте heroku). Если появились какие-то проблемы - гугл знает на них ответ.
+## На этом все
+Ваше приложение должно успешно задеплоиться (см. на сайте heroku). Если появились какие-то проблемы - гугл знает на них ответ.
