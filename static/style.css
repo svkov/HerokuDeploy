@@ -1,3 +1,44 @@
 body{
     background-color: bisque;
 }
+
+.center{
+    margin: 15% auto auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+.center-table{
+    margin: 5% auto auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+.border{
+    border: 3px solid black;
+}
+
+.row{
+    position: relative;
+    text-align: center;
+}
+
+.table{
+    padding-left: 30%;
+    padding-right: 35%;
+}
+
+.button-back{
+    width: 30%;
+    font-size: 20px;
+}
+
+.text{
+    font-family: "Comic Sans MS", cursive, sans-serif
+}
+
+#form{
+    width: 100%;
+}

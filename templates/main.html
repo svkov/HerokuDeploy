@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-<p>Type something</p>
-<form action="/create/" method="post">
-    {% csrf_token %}
-    <input type="text" name="text">
-    <input type="submit">
-</form>
+    <div class="center border">
+        <p class="text"></p>
+        <form id="form" action="/create/" method="post">
+            {% csrf_token %}
+            <!--<input type="text" name="text">-->
+            <label class="text">Здесь можно оставить отзыв о кружке по питону
+                <textarea rows="4" cols="50" name="text" form="form"></textarea>
+            </label>
+            <br>
+            <input class="button-back" type="submit" value="OK">
+        </form>
+    </div>
 </body>
 </html>
